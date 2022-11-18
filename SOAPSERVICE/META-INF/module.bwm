@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:EmpProfessional="http://www.tibco.com/EmpProfessional/" xmlns:EmpProfessional_1="http://www.EniqueSolutions/Employee_Details_POC/EmpProfessional" xmlns:Fault="http://www.example.org/Fault" xmlns:MainSystem="http://www.EniqueSolutions/EmployeeDetailPOC/MainSystem" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:axis2="http://xsd.tns.tibco.com/bw/models/binding/soap/axis2" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_zZWkoE4GEe2VgoMvfkXfpQ" targetNamespace="http://tns.tibco.com/bw/composite/SOAPSERVICE" name="SOAPSERVICE" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_rh1vMWcHEe2iJ9GGEga8bA" name="EmpProfessional1" promote="ComponentEmpProfessionalSOAP/EmpProfessional">
+    <sca:interface.wsdl xmi:id="_riJRMGcHEe2iJ9GGEga8bA" interface="http://www.tibco.com/EmpProfessional/#wsdl.interface(EmpProfessional)" scaext:wsdlLocation="../Service%20Descriptors/EmpProfessional.wsdl"/>
+    <scaext:binding xsi:type="axis2:SOAPServiceBinding" xmi:id="_-UxCsGcHEe2iJ9GGEga8bA" name="SOAPServiceBinding" targetNamespace="http://www.tibco.com/b43b1ba5540d43dea2632443320b51b6/SOAPServiceBinding" portTypeQName="EmpProfessional:EmpProfessional" transportBindingType="HTTP" attachmentStyle="SwA" modelVersion="1.2.0" portTypeWSDLLocation="platform:/resource/SOAPSERVICE/Service%20Descriptors/EmpProfessional.wsdl">
+      <bindingType xmi:id="_-VD9oGcHEe2iJ9GGEga8bA"/>
+      <inboundConfiguration xsi:type="axis2:HttpTransportConfiguration" xmi:id="_FkoisGcIEe2iJ9GGEga8bA" endpointURI="/SOAPServiceBinding/empProfessional1/" httpConnector="commonlog.HTTPConnectorResource"/>
+      <operationConfiguration xmi:id="_-VD9oWcHEe2iJ9GGEga8bA" operationName="NewOperation" action="NewOperation" actionNeeded="true">
+        <bindingType xmi:id="_-VD9omcHEe2iJ9GGEga8bA"/>
+        <messageConfiguration xmi:id="_-VD9o2cHEe2iJ9GGEga8bA" messageQName="EmpProfessional:NewOperationRequest" wsdlLocation="platform:/resource/SOAPSERVICE/Service%20Descriptors/EmpProfessional.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_-VD9pGcHEe2iJ9GGEga8bA" partName="parameters" partElementName="MainSystem:EmpProfessionalReq"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_-VD9pWcHEe2iJ9GGEga8bA" messageQName="EmpProfessional:NewOperationResponse" messageDirection="OUTPUT" wsdlLocation="platform:/resource/SOAPSERVICE/Service%20Descriptors/EmpProfessional.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_-VD9pmcHEe2iJ9GGEga8bA" partName="parameters" partElementName="MainSystem:RestResponse"/>
+        </messageConfiguration>
+        <messageConfiguration xmi:id="_-VD9p2cHEe2iJ9GGEga8bA" messageQName="EmpProfessional:NewOperationFault1" messageDirection="FAULT" action="fault" wsdlLocation="platform:/resource/SOAPSERVICE/Service%20Descriptors/EmpProfessional.wsdl">
+          <messagePartConfigurations xsi:type="axis2:BodyPartConfiguration" xmi:id="_-VD9qGcHEe2iJ9GGEga8bA" partName="parameters" partElementName="Fault:Fault"/>
+        </messageConfiguration>
+        <context xmi:id="_-VD9qWcHEe2iJ9GGEga8bA">
+          <inputMapping xmi:id="_-VD9qmcHEe2iJ9GGEga8bA"/>
+          <outputMapping xmi:id="_-VD9q2cHEe2iJ9GGEga8bA" direction="OUTPUT"/>
+          <faultMappings xmi:id="_-VD9rGcHEe2iJ9GGEga8bA" direction="FAULT" faultName="fault"/>
+        </context>
+      </operationConfiguration>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_-VD9rWcHEe2iJ9GGEga8bA" bindingName="SOAPServiceBinding"/>
+  </sca:service>
+  <sca:property xmi:id="_0sNToE4GEe2VgoMvfkXfpQ" name="BW.DEPLOYMENTUNIT.TYPE" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0sQ-AE4GEe2VgoMvfkXfpQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0sTaQE4GEe2VgoMvfkXfpQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0sV2gE4GEe2VgoMvfkXfpQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0saH8E4GEe2VgoMvfkXfpQ" name="BW.DOMAIN.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0sdLQE4GEe2VgoMvfkXfpQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0sgOkE4GEe2VgoMvfkXfpQ" name="BW.APPSPACE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0sjR4E4GEe2VgoMvfkXfpQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_0sluIE4GEe2VgoMvfkXfpQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:component xmi:id="_Yh2QEGcHEe2iJ9GGEga8bA" name="ComponentEmpProfessionalSOAP" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_Yh2QEWcHEe2iJ9GGEga8bA" processName="soapservice.EmpProfessionalSOAP"/>
+    <sca:service xmi:id="_rhslQGcHEe2iJ9GGEga8bA" name="EmpProfessional">
+      <sca:interface.wsdl xmi:id="_rh1vMGcHEe2iJ9GGEga8bA" interface="http://www.tibco.com/EmpProfessional/#wsdl.interface(EmpProfessional)" scaext:wsdlLocation="../Service%20Descriptors/EmpProfessional.wsdl"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
