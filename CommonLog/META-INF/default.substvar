@@ -83,15 +83,6 @@
 			<useLookupValue>false</useLookupValue>
 		</globalVariable>
 		<globalVariable>
-			<name>/JMSConnection/JMSURL</name>
-			<value>tcp://localhost:7222</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>String</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
 			<name>/DataBaseConnection/Username</name>
 			<value>system</value>
 			<deploymentSettable>false</deploymentSettable>
@@ -138,15 +129,6 @@
 		</globalVariable>
 		<globalVariable>
 			<name>/HTTPConnection/Port</name>
-			<value>2002</value>
-			<deploymentSettable>false</deploymentSettable>
-			<serviceSettable>false</serviceSettable>
-			<type>Integer</type>
-			<isOverride>false</isOverride>
-			<useLookupValue>false</useLookupValue>
-		</globalVariable>
-		<globalVariable>
-			<name>/HTTPConnection/PortOrg</name>
 			<value>2002</value>
 			<deploymentSettable>false</deploymentSettable>
 			<serviceSettable>false</serviceSettable>
